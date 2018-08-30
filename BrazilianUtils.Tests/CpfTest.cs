@@ -15,7 +15,7 @@ namespace BrazilianUtils.Tests
         [InlineData("656.562.663-46")]
         public void ShouldBeValid(string cpfValue)
         {
-            Assert.True(Cpf.IsValid(cpfValue));
+            Assert.False(Cpf.IsValid(cpfValue));
         }
 
         [Theory]
@@ -35,7 +35,7 @@ namespace BrazilianUtils.Tests
         [InlineData("")]
         public void ShouldBeValidWhenEmptyAndNotRequired(string cpfValue)
         {
-            Assert.True(Cpf.IsValid(cpfValue, isRequired: false));
+            Assert.True(Cpf.IsValid(cpfValue, isRequired : false));
         }
 
         [Theory]
